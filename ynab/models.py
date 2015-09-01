@@ -121,6 +121,51 @@ class Account(Model):
         return self._entity.note
 
 
+class MonthlyBudget(Model):
+    _entity_type = schema.MonthlyBudget
+
+    def __init__(self, ynab, entity):
+        super(MonthlyBudget, self).__init__(ynab, entity)
+        self._categories = MonthlySubCategoryBudgets(
+            MonthlySubCategoryBudget(ynab, category) for category in self._entity.monthlySubCategoryBudgets or [])
+
+    @force_encode
+    def __repr__(self):
+        return '<MonthlyBudget: {}>'.format(self.month)
+
+    @property
+    def month(self):
+        return self._entity.month
+
+    @property
+    def monthly_sub_category_budgets(self):
+        return self._categories
+
+
+class MonthlySubCategoryBudget(Model):
+    _entity_type = schema.MonthlySubCategoryBudget
+
+    @force_encode
+    def __repr__(self):
+        return '<MonthlySubCategoryBudget: {}>'.format(self.category)
+
+    @property
+    def budgeted(self):
+        return self._entity.budgeted
+
+    @property
+    def overspending_handling(self):
+        return self._entity.overspendingHandling
+
+    @property
+    def month(self):
+        return self._ynab.monthly_budgets.by_id(self._entity.parentMonthlyBudgetId).month
+
+    @property
+    def category(self):
+        return self._ynab.categories.by_id(self._entity.categoryId)
+
+
 class Payee(Model):
     _entity_type = schema.Payee
 
@@ -185,6 +230,11 @@ class Category(CategoryModel):
     @property
     def transactions(self):
         return self._ynab.transactions.filter('category', self)
+
+    @property
+    def monthly_sub_category_budgets(self):
+        list_of_lists =  [mb.monthly_sub_category_budgets.filter('category', self) for mb in self._ynab.monthly_budgets]
+        return [item for sublist in list_of_lists for item in sublist]  # flatten
 
 
 class MasterCategory(CategoryModel):
@@ -389,6 +439,16 @@ class ModelCollection(collections.Sequence):
 class Accounts(ModelCollection):
     _model_type = Account
     _index_key = 'name'
+
+
+class MonthlyBudgets(ModelCollection):
+    _model_type = MonthlyBudget
+    _index_key = 'month'
+
+
+class MonthlySubCategoryBudgets(ModelCollection):
+    _model_type = MonthlySubCategoryBudget
+    _index_key = 'category'
 
 
 class Payees(ModelCollection):

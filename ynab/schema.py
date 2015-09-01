@@ -58,6 +58,18 @@ class Account(Entity):
     note = StringType()
 
 
+class MonthlySubCategoryBudget(Entity):
+    budgeted = FloatType()
+    categoryId = StringType()
+    overspendingHandling = StringType()
+    parentMonthlyBudgetId = StringType()
+
+
+class MonthlyBudget(Entity):
+    month = StringType()
+    monthlySubCategoryBudgets = ListType(ModelType(MonthlySubCategoryBudget))
+
+
 class PayeeLocation(Entity):
     parentPayeeId = StringType()
     latitude = FloatType()

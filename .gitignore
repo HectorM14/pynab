@@ -5,3 +5,4 @@
 build/
 dist/
 /release.sh
+.idea/
