@@ -66,7 +66,7 @@ class MonthlySubCategoryBudget(Entity):
 
 
 class MonthlyBudget(Entity):
-    month = StringType()
+    month = DateType()
     monthlySubCategoryBudgets = ListType(ModelType(MonthlySubCategoryBudget))
 
 
