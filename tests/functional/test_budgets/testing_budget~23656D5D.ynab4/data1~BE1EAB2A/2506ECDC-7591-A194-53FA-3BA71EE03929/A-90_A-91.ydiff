@@ -1,0 +1,26 @@
+{
+  "dataVersion": "4.2",
+  "startVersion": "A-90",
+  "deviceGUID": "2506ECDC-7591-A194-53FA-3BA71EE03929",
+  "endVersion": "A-91",
+  "shortDeviceId": "A",
+  "formatVersion": null,
+  "publishTime": "Wed Sep 2 19:37:28 GMT+0100 2015",
+  "items": [
+    {
+      "name": "Master category 2",
+      "entityVersion": "A-91",
+      "isTombstone": false,
+      "madeWithKnowledge": null,
+      "isResolvedConflict": false,
+      "note": null,
+      "entityId": "A7",
+      "sortableIndex": 2013265919,
+      "entityType": "masterCategory",
+      "type": "OUTFLOW",
+      "expanded": true,
+      "deleteable": true
+    }
+  ],
+  "budgetDataGUID": null
+}

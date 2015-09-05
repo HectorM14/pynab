@@ -1,0 +1,39 @@
+{
+  "dataVersion": "4.2",
+  "startVersion": "A-138",
+  "deviceGUID": "2506ECDC-7591-A194-53FA-3BA71EE03929",
+  "endVersion": "A-140",
+  "shortDeviceId": "A",
+  "formatVersion": null,
+  "publishTime": "Wed Sep 2 19:38:38 GMT+0100 2015",
+  "items": [
+    {
+      "cachedBalance": null,
+      "name": "Natural Gas/Propane/Oil",
+      "entityVersion": "A-139",
+      "isTombstone": true,
+      "madeWithKnowledge": null,
+      "isResolvedConflict": false,
+      "note": null,
+      "entityId": "A14",
+      "sortableIndex": 2113929215,
+      "entityType": "category",
+      "type": "OUTFLOW",
+      "masterCategoryId": "A7"
+    },
+    {
+      "overspendingHandling": null,
+      "entityVersion": "A-140",
+      "isTombstone": true,
+      "madeWithKnowledge": null,
+      "isResolvedConflict": false,
+      "parentMonthlyBudgetId": "MB/2015-09",
+      "note": null,
+      "entityId": "MCB/2015-09/A14",
+      "entityType": "monthlyCategoryBudget",
+      "categoryId": "A14",
+      "budgeted": 9
+    }
+  ],
+  "budgetDataGUID": null
+}

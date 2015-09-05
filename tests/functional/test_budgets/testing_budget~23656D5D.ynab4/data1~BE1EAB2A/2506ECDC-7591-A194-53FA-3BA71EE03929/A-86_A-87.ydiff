@@ -1,0 +1,25 @@
+{
+  "dataVersion": "4.2",
+  "startVersion": "A-86",
+  "deviceGUID": "2506ECDC-7591-A194-53FA-3BA71EE03929",
+  "endVersion": "A-87",
+  "shortDeviceId": "A",
+  "formatVersion": null,
+  "publishTime": "Wed Sep 2 19:36:57 GMT+0100 2015",
+  "items": [
+    {
+      "overspendingHandling": null,
+      "entityVersion": "A-87",
+      "isTombstone": false,
+      "madeWithKnowledge": null,
+      "isResolvedConflict": false,
+      "parentMonthlyBudgetId": "MB/2015-09",
+      "note": null,
+      "entityId": "MCB/2015-09/A27",
+      "entityType": "monthlyCategoryBudget",
+      "categoryId": "A27",
+      "budgeted": 20
+    }
+  ],
+  "budgetDataGUID": null
+}

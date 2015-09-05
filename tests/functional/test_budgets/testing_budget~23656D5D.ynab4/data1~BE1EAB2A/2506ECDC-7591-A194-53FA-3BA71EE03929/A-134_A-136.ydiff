@@ -1,0 +1,39 @@
+{
+  "dataVersion": "4.2",
+  "startVersion": "A-134",
+  "deviceGUID": "2506ECDC-7591-A194-53FA-3BA71EE03929",
+  "endVersion": "A-136",
+  "shortDeviceId": "A",
+  "formatVersion": null,
+  "publishTime": "Wed Sep 2 19:38:28 GMT+0100 2015",
+  "items": [
+    {
+      "cachedBalance": null,
+      "name": "Electricity",
+      "entityVersion": "A-135",
+      "isTombstone": true,
+      "madeWithKnowledge": null,
+      "isResolvedConflict": false,
+      "note": null,
+      "entityId": "A12",
+      "sortableIndex": 2013265919,
+      "entityType": "category",
+      "type": "OUTFLOW",
+      "masterCategoryId": "A7"
+    },
+    {
+      "overspendingHandling": null,
+      "entityVersion": "A-136",
+      "isTombstone": true,
+      "madeWithKnowledge": null,
+      "isResolvedConflict": false,
+      "parentMonthlyBudgetId": "MB/2015-09",
+      "note": null,
+      "entityId": "MCB/2015-09/A12",
+      "entityType": "monthlyCategoryBudget",
+      "categoryId": "A12",
+      "budgeted": 7
+    }
+  ],
+  "budgetDataGUID": null
+}
