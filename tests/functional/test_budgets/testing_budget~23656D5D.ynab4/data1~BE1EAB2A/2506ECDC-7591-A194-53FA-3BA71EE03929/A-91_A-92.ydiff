@@ -1,0 +1,26 @@
+{
+  "dataVersion": "4.2",
+  "startVersion": "A-91",
+  "deviceGUID": "2506ECDC-7591-A194-53FA-3BA71EE03929",
+  "endVersion": "A-92",
+  "shortDeviceId": "A",
+  "formatVersion": null,
+  "publishTime": "Wed Sep 2 19:37:33 GMT+0100 2015",
+  "items": [
+    {
+      "cachedBalance": null,
+      "name": "New Category",
+      "entityVersion": "A-92",
+      "isTombstone": false,
+      "madeWithKnowledge": null,
+      "isResolvedConflict": false,
+      "note": null,
+      "entityId": "26203AB6-9B6D-C2B3-C6CB-8F597F30A08F",
+      "sortableIndex": 1610612735,
+      "entityType": "category",
+      "type": "OUTFLOW",
+      "masterCategoryId": "A4"
+    }
+  ],
+  "budgetDataGUID": null
+}

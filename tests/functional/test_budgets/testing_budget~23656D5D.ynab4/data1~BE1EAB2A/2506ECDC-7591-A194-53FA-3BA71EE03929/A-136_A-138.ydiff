@@ -1,0 +1,39 @@
+{
+  "dataVersion": "4.2",
+  "startVersion": "A-136",
+  "deviceGUID": "2506ECDC-7591-A194-53FA-3BA71EE03929",
+  "endVersion": "A-138",
+  "shortDeviceId": "A",
+  "formatVersion": null,
+  "publishTime": "Wed Sep 2 19:38:33 GMT+0100 2015",
+  "items": [
+    {
+      "cachedBalance": null,
+      "name": "Water",
+      "entityVersion": "A-137",
+      "isTombstone": true,
+      "madeWithKnowledge": null,
+      "isResolvedConflict": false,
+      "note": null,
+      "entityId": "A13",
+      "sortableIndex": 2080374783,
+      "entityType": "category",
+      "type": "OUTFLOW",
+      "masterCategoryId": "A7"
+    },
+    {
+      "overspendingHandling": null,
+      "entityVersion": "A-138",
+      "isTombstone": true,
+      "madeWithKnowledge": null,
+      "isResolvedConflict": false,
+      "parentMonthlyBudgetId": "MB/2015-09",
+      "note": null,
+      "entityId": "MCB/2015-09/A13",
+      "entityType": "monthlyCategoryBudget",
+      "categoryId": "A13",
+      "budgeted": 8
+    }
+  ],
+  "budgetDataGUID": null
+}

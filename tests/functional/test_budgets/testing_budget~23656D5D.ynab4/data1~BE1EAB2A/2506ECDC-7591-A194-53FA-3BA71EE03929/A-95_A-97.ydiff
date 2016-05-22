@@ -1,0 +1,39 @@
+{
+  "dataVersion": "4.2",
+  "startVersion": "A-95",
+  "deviceGUID": "2506ECDC-7591-A194-53FA-3BA71EE03929",
+  "endVersion": "A-97",
+  "shortDeviceId": "A",
+  "formatVersion": null,
+  "publishTime": "Wed Sep 2 19:37:58 GMT+0100 2015",
+  "items": [
+    {
+      "cachedBalance": null,
+      "name": "Internet",
+      "entityVersion": "A-96",
+      "isTombstone": true,
+      "madeWithKnowledge": null,
+      "isResolvedConflict": false,
+      "note": null,
+      "entityId": "A10",
+      "sortableIndex": 1610612735,
+      "entityType": "category",
+      "type": "OUTFLOW",
+      "masterCategoryId": "A7"
+    },
+    {
+      "overspendingHandling": null,
+      "entityVersion": "A-97",
+      "isTombstone": true,
+      "madeWithKnowledge": null,
+      "isResolvedConflict": false,
+      "parentMonthlyBudgetId": "MB/2015-09",
+      "note": null,
+      "entityId": "MCB/2015-09/A10",
+      "entityType": "monthlyCategoryBudget",
+      "categoryId": "A10",
+      "budgeted": 5
+    }
+  ],
+  "budgetDataGUID": null
+}

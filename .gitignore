@@ -6,3 +6,4 @@ build/
 dist/
 /release.sh
 .idea/
+.DS_Store
