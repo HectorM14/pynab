@@ -41,7 +41,7 @@ class YNAB(object):
         with open(meta, 'r') as f:
             data_folder = os.path.join(budget_folder, json.load(f)['relativeDataFolderName'])
         devices_folder = os.path.join(data_folder, 'devices')
-        device_files = filter(re.compile(r'^[A-Z]\.ydevice$').match, os.listdir(devices_folder))
+        device_files = list(filter(re.compile(r'^[A-Z]\.ydevice$').match, os.listdir(devices_folder)))
         devices = []
         for device_file in device_files:
             with open(os.path.join(devices_folder, device_file), 'r') as f:
@@ -75,7 +75,7 @@ class YNAB(object):
                 raise RuntimeError('No device {!r} for {!r} at: {}'.format(device, budget, path))
         self._path = device['file']
         self._device = device['name']
-        with open(self._path, 'r') as f:
+        with open(self._path, encoding='utf8', mode='r') as f:
             self._init_data(json.load(f))
 
     @property

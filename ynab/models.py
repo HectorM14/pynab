@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from __future__ import unicode_literals
+import collections
+from enum import Enum
 
 import six
 import toolz
-import collections
-from enum import Enum
+
 from dateparser.date import DateDataParser
 
 from . import schema
@@ -17,7 +17,7 @@ class AccountType(Enum):
     SAVINGS = 'Savings'
     CREDIT_CARD = 'CreditCard'
     CASH = 'Cash'
-    LINE_OF_CREDIT = 'LineOfCredit'
+    LINE_OF_CREDIT = 'LineofCredit'
     PAYPAL = 'Paypal'
     MERCHANT_ACCOUNT = 'MerchantAccount'
     INVESTMENT_ACCOUNT = 'InvestmentAccount'
@@ -366,7 +366,7 @@ class ModelCollection(collections.Sequence):
     @classmethod
     @toolz.curry
     def _from_flat(cls, ynab, data):
-        return cls(map(cls._model_type._from_flat(ynab), data))
+        return cls(list(map(cls._model_type._from_flat(ynab), data)))
 
     def __len__(self):
         return len(self._elements)
